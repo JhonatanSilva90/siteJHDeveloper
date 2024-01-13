@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #252222;
+}
+
+header {
+    border: 1px solid red;
+    text-align: center;
+    padding: 40px;
+    display: flex;
+    align-items: center; /*Alinha os itens no centro do eixo Y */
+    justify-content: space-between; /* Distribui o espaço uniformemente entre os itens */
+}
+
+.logo {
+   color: #ffffff;
+   font-family: "Tektur", sans-serif;
+}
+
+.itens-header {
+    color: #ffffff;
+    font-size: 20px;
+    border: 1px solid red;
+    font-family: "Roboto Condensed", sans-serif;
+    
+}
+
+span {
+    font-size: 36px;
+}
+.logo span:first-child {
+    color: #ffff00;
+}
+.logo span:last-child {
+    color: #ffffff;
+}
+
+
+a {
+    text-decoration: none;
+    padding: 12px;
+    color: #ffffff;
+}
+
+main {
+    border: 1px red solid;
+    margin-top: auto;
+}
+
+.footer {
+    border: 1px solid red;
+    position: absolute;
+    bottom: 0;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;  /* Alinha os itens no centro do eixo Y */
+    width: 100%; /* Para que o footer ocupe todo o eixo X da página */
+    color: white;
+    padding: 20px; /* Tamanho do eixo Y do footer */
+}
+
+.footer span:first-child {
+    color: #ffff00;
+}
+.footer span:last-child {
+    color: #ffffff;
+}
+
+.logo-footer {
+    font-family: "Tektur", sans-serif;
+    font-size: 16px;
+}
+
+.reserved {
+    font-family: "Roboto Condensed", sans-serif;
+}
