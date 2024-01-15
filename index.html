@@ -1,54 +1,158 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Monoton&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Tektur:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./images/logo.jpeg" type="image/x-icon">
     <title>JHDeveloper</title>
-    
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="logo">
-            <a href="">
-                <span >JH</span><span>Developer</span>
-            </a>
-            <h5>Programação Full-Stack</h5>
-        </div>
-        <div class="itens-header">
-            <nav>
-                <a href="">Home</a>
-                <a href="">Sobre Nós</a>
-                <a href="">Serviços</a>
-                <a href="">Cases</a>
-                <a href="">Contato</a>
-            </nav>
-        </div>
+      <div class="logo">
+        <a> <span>JH</span><span>Developer</span> </a>
+        <h5>Programação Full-Stack</h5>
+      </div>
+      <div class="itens-header">
+        <nav>
+          <a href="">Home</a>
+          <a href="">Sobre Mim</a>
+          <a href="">Serviços</a>
+          <a href="">Cases</a>
+          <a href="">Contato</a>
+        </nav>
+      </div>
     </header>
 
     <main>
+      <section>
+        <div class="sobremim">
+          <h2>Sobre Mim</h2>
+          <p>
+            Sou um Programador Full Stack apaixonado por transformar ideias em
+            soluções digitais impactantes. Minha expertise abrange diversas
+            tecnologias, desde a construção de interfaces elegantes com HTML,
+            CSS e JavaScript até o desenvolvimento robusto de aplicações
+            utilizando React, Python e SQL.
+          </p>
+          <br />
 
-        <h1>OLÁ MUNDO</h1>
+          <h2>Tecnologias que domino:</h2>
+          <div class="tecnologias">
+            <img src="./images/html-5.png" alt="" />
+            <img src="./images/css-3.png" alt="" />
+            <img id="imgjs" src="./images/js.png" alt="" />
+            <img src="./images/react.png" alt="" />
+            <img src="./images/python.png" alt="" />
+            <img src="./images/servidor-sql.png" alt="" />
+          </div>
+          <br />
+
+          <h2>Abordagem Profissional:</h2>
+          <p>
+            Tenho uma abordagem centrada no cliente, sempre empenhado em superar
+            expectativas e entregar resultados excepcionais. Acredito que a
+            excelência técnica aliada à compreensão profunda das necessidades do
+            cliente é a chave para o sucesso de qualquer projeto.
+          </p>
+          <br />
+
+          <h2>Foco em Resultados:</h2>
+          <p>
+            Minha mentalidade é orientada para resultados. Busco constantemente
+            maneiras de otimizar processos, melhorar a eficiência e criar
+            soluções que não apenas atendam, mas excedam as metas e objetivos
+            estabelecidos.
+          </p>
+          <br />
+
+          <h2>Princípios Profissionais:</h2>
+          <p>
+            <strong>Inovação:</strong> Sempre em busca de novas tecnologias e
+            abordagens para melhorar a qualidade e a eficiência do
+            desenvolvimento.
+          </p>
+          <br />
+          <p>
+            <strong>Colaboração:</strong> Valorizo o trabalho em equipe e a
+            troca de ideias para alcançar soluções mais sólidas.
+          </p>
+          <br />
+          <p>
+            <strong>Comprometimento:</strong> Dedicado a entregar projetos no
+            prazo, mantendo altos padrões de qualidade.
+          </p>
+          <br />
+          <p>
+            Estou sempre aberto a desafios estimulantes e oportunidades de
+            aprendizado. Se precisar de um profissional apaixonado por
+            tecnologia e comprometido com a excelência, estou pronto para
+            contribuir para o sucesso do seu próximo projeto.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <h3 class="header">contatos</h3>
+
+          <div class="buttons-container">
+            <button class="email">
+              <img src="./images/envelope.png" alt="" />
+              <a href="#email" type="email">jhonatan.dev90@gmail.com</a>
+            </button>
+            <button class="telefone">
+              <img src="./images/telefone.png" alt="" />
+              <a href="#telefone">+55 93 99173-7093</a>
+            </button>
+          </div>
+
+          <div class="mensagem-contato">
+            <h3>Entre em contato através do formulário abaixo:</h5>
+            <form action="">
+              <input
+                placeholder="Email"
+                id="email"
+                type="email"
+                name="email"
+                required
+              />
+              <textarea
+                placeholder="Mensagem"
+                name="mensagem"
+                id="mensagem"
+                required
+              ></textarea>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="footer">
-            <a class="logo-footer" href="">
-                <span class="logo-footer">JH</span><span class="logo-footer">Developer</span>
-            </a>
-            <!-- <h2><img src="" alt="">JHDeveloper</h2> -->
-            <p class="reserved">© 2024 JHDeveloper. All right reserved.</p>
-            <div>
-                <a href="https://www.linkedin.com/in/jhonatan-silva-834773292"><img src="./images/linkedin.png" alt=""></a>
-                <a href="https://github.com/JhonatanSilva90"><img src="./images/github.png" alt=""></a>
-
-            </div>
+      <div class="footer">
+        <a class="logo-footer" href="">
+          <span class="logo-footer">JH</span
+          ><span class="logo-footer">Developer</span>
+        </a>
+        <div class="reserved">
+          <p>© 2024 JHDeveloper. All right reserved.</p>
         </div>
-            
+        <div class="links-footer">
+          <a href="https://www.linkedin.com/in/jhonatan-silva-834773292"
+            ><img src="./images/linkedin.png" alt=""
+          /></a>
+          <a href="https://github.com/JhonatanSilva90"
+            ><img src="./images/github.png" alt=""
+          /></a>
+        </div>
+      </div>
     </footer>
-    
-</body>
+  </body>
 </html>
