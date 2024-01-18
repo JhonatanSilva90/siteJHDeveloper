@@ -2,9 +2,9 @@
   --cor-white: #ffffff;
   --cor-black: hsl(0, 0%, 0%);
   --cor-yellow: #ffff00;
-  --cor-footer:#2f2e2e;
-  --cor-bluemax: rgb(3, 68, 147);;
-  --cor-bluemin: rgb(43, 96, 161);;
+  --cor-footer: #2f2e2e;
+  --cor-bluemax: rgb(3, 68, 147);
+  --cor-bluemin: rgb(43, 96, 161);
 }
 
 * {
@@ -13,6 +13,14 @@
   box-sizing: border-box;
   background-color: rgb(37, 34, 34);
   font-family: "Roboto Condensed", sans-serif;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid red;
+  width: 100%;
 }
 
 header {
@@ -29,7 +37,6 @@ header {
 
 .logo {
   color: var(--cor-white);
-
 }
 .logo span {
   font-family: "Tektur", sans-serif;
@@ -59,7 +66,6 @@ main {
   padding: 40px;
   padding-top: 6rem;
 }
-
 
 .sobremim {
   color: var(--cor-white);
@@ -183,7 +189,7 @@ main {
   display: flex;
   flex-direction: column;
   margin: 0 auto; /* Para centralizar a caixa na página */
-  height: 15rem;
+  height: 24rem;
   margin: 0.5rem 0.5rem;
   width: 32rem;
 }
@@ -221,41 +227,61 @@ main {
   padding: 0.5rem 1rem;
 }
 
-.footer {
-    position: absolute;
-    display: inline-flex;
-    justify-content: space-around;
-    align-items: center; /* Alinha os itens no centro do eixo Y */
-    width: 100%; /* Para que o footer ocupe todo o eixo X da página */
-    color: var(--cor-white);
-    padding: 20px; /* Tamanho do eixo Y do footer */
-
-    background-color: var(--cor-footer);
+#buttonsubmit {
+  border: none;
+  margin-top: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--cor-bluemin);
+  border-radius: 8px;
+  height: 3rem;
+  width: 6rem;
+  cursor: pointer;
+  color: var(--cor-black);
+  font-size: 1rem;
 }
-  
+
+#buttonsubmit:hover {
+  background-color: var(--cor-bluemax);
+  color: var(--cor-white);
+}
+
+.footer {
+  position: absolute;
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center; /* Alinha os itens no centro do eixo Y */
+  width: 100%; /* Para que o footer ocupe todo o eixo X da página */
+  color: var(--cor-white);
+  padding: 20px; /* Tamanho do eixo Y do footer */
+
+  background-color: var(--cor-footer);
+}
+
 .footer span:first-child {
-    color: var(--cor-yellow);
+  color: var(--cor-yellow);
 }
 .footer span:last-child {
-    color: var(--cor-white);
+  color: var(--cor-white);
 }
-  
+
 .logo-footer {
-    font-family: "Tektur", sans-serif;
-    font-size: 1rem;
-    background-color: var(--cor-footer);
+  font-family: "Tektur", sans-serif;
+  font-size: 1rem;
+  background-color: var(--cor-footer);
 }
 
 .footer a {
-    background-color: var(--cor-footer);
+  background-color: var(--cor-footer);
 }
 .footer img {
-    background-color: var(--cor-footer);
+  background-color: var(--cor-footer);
 }
 .footer p {
-    background-color: var(--cor-footer);
+  background-color: var(--cor-footer);
 }
 
 .links-footer {
-    background-color: var(--cor-footer);
+  background-color: var(--cor-footer);
 }
