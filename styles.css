@@ -19,7 +19,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid red;
   width: 100%;
 }
 
@@ -46,6 +45,26 @@ header {
   color: var(--cor-white);
   font-size: 1rem;
 }
+
+.menu-itens-header {
+  display: none;
+}
+
+/* Para fazer a direção ser alterada para coluna, o menu de hamburguer aparecer e os itens do menu sumirem quando a tela tiver menor que 770px */
+@media (max-width: 770px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .menu-itens-header {
+    display: block;
+  }
+
+  .itens-header {
+    display: none;
+  }
+}
+
 span {
   font-size: 2.25rem;
 }
@@ -67,6 +86,19 @@ main {
   padding-top: 6rem;
 }
 
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 4rem;
+}
+
+#img-jhonatan {
+  border-radius: 50%;
+  width: 20rem;
+  margin-left: 2rem;
+}
 .sobremim {
   color: var(--cor-white);
   font-family: "Roboto Condensed", sans-serif;
