@@ -41,12 +41,14 @@ header {
   font-family: "Tektur", sans-serif;
 }
 
-.itens-header {
+#menu {
   color: var(--cor-white);
   font-size: 1rem;
+
+  border: 1px solid red;
 }
 
-.menu-itens-header {
+#botao {
   display: none;
 }
 
@@ -56,12 +58,21 @@ header {
     flex-direction: column;
   }
 
-  .menu-itens-header {
+  #botao {
     display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  #botao :hover {
+    transform: scale(1.1);
   }
 
-  .itens-header {
+  #menu {
     display: none;
+  }
+
+  .buttons-container {
+    flex-direction: column;
   }
 }
 
@@ -92,13 +103,22 @@ main {
   justify-content: center;
 
   margin: 0 4rem;
+
+  border: 1px solid red;
 }
 
 #img-jhonatan {
   border-radius: 50%;
   width: 20rem;
   margin-left: 2rem;
+  transition: filter 0.5s ease;
+  filter: grayscale(100%); /* Deixar a imagem na cor preto e branca */
 }
+
+#img-jhonatan:hover {
+  filter: grayscale(0%); /* Ao passar o mouse, tornar a imagem colorida */
+}
+
 .sobremim {
   color: var(--cor-white);
   font-family: "Roboto Condensed", sans-serif;
@@ -135,20 +155,22 @@ main {
 
 .buttons-container {
   display: flex;
-  flex-direction: column;
-  padding: 0;
+  /* flex-direction: row; */
   align-items: center;
-  flex-wrap: wrap;
   height: 16rem;
-  width: 32rem;
+  width: 64rem;
   justify-content: center;
+
+  gap: 1rem;
+
+  border: 1px solid red;
 }
 
 .email {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 70%;
+  width: 25rem;
   border-radius: 8px;
   border: none;
   height: 40%;
@@ -185,10 +207,9 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 70%;
+  width: 25rem;
   border-radius: 8px;
   border: none;
-  margin-top: 0.5rem;
   height: 40%;
   background-color: var(--cor-bluemin);
   cursor: pointer;
@@ -316,4 +337,56 @@ main {
 
 .links-footer {
   background-color: var(--cor-footer);
+}
+
+/* Testando estilizacao portfolio */
+
+#portfolio {
+  margin: 2rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+#portfolio h1 {
+  color: var(--cor-white);
+  font-size: 3rem;
+}
+
+.listaPortfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: rgb(37, 34, 34);
+  border-radius: 8px;
+  width: 40%;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza no eixo X */
+  justify-content: center; /* Centraliza no eixo Y */
+  text-align: center;
+  margin: 2rem;
+  border: 1px solid red;
+  transition: background-color 0.5s;
+  color: var(--cor-white);
+  transition: color 0.3s; /* Ajuste o tempo da transição da cor interna */
+}
+
+.card:hover {
+  background-color: var(--cor-footer);
+}
+.card:hover h4,
+.card:hover img,
+.card:hover p {
+  background-color: var(--cor-footer);
+}
+
+/* Adiciona espaçamento entre os elementos h4, img, p e p dentro do card */
+.card h4,
+.card img,
+.card p {
+  margin-bottom: 10px;
 }
