@@ -146,6 +146,10 @@ main {
   margin: 0 auto; /* Para centralizar a caixa na página */
 }
 
+.imgProjetos {
+  height: 8rem;
+}
+
 .header {
   color: var(--cor-white);
   font-size: 2rem;
@@ -373,6 +377,7 @@ main {
   transition: background-color 0.5s;
   color: var(--cor-white);
   transition: color 0.3s; /* Ajuste o tempo da transição da cor interna */
+  cursor: pointer;
 }
 
 .card:hover {
