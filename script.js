@@ -66,6 +66,125 @@ nav.appendChild(menuDiv);
 // Adicionando o <nav> ao <header>
 header.appendChild(nav);
 
+// Criando as TAGS, antes exinidas por HTML, agora por meio do JavaScript
+// Função para criar e adicionar elementos HTML
+function criarElementos() {
+  // Criando os elementos
+  const section = document.createElement("section");
+  section.classList.add("main"); // Adicionando a classe 'main' à section
+  const divSobreMim = document.createElement("div");
+  divSobreMim.classList.add("sobremim");
+
+  const h2SobreMim = document.createElement("h2");
+  h2SobreMim.textContent = "Sobre Mim";
+
+  const pSobreMim = document.createElement("p");
+  pSobreMim.textContent =
+    "Sou um Programador Full Stack apaixonado por transformar ideias em soluções digitais impactantes. Minha expertise abrange diversas tecnologias, desde a construção de interfaces elegantes com HTML, CSS e JavaScript até o desenvolvimento robusto de aplicações utilizando React, Python e SQL.";
+
+  const h2Tecnologias = document.createElement("h2");
+  h2Tecnologias.textContent = "Tecnologias que domino:";
+
+  const divTecnologias = document.createElement("div");
+  divTecnologias.classList.add("tecnologias");
+
+  const imgHTML5 = criarImagem("./images/html-5.png");
+  const imgCSS3 = criarImagem("./images/css-3.png");
+  const imgJS = criarImagem("./images/js.png");
+  imgJS.id = "imgjs";
+  const imgReact = criarImagem("./images/react.png");
+  const imgPython = criarImagem("./images/python.png");
+  const imgSQL = criarImagem("./images/servidor-sql.png");
+
+  const h2Abordagem = document.createElement("h2");
+  h2Abordagem.textContent = "Abordagem Profissional:";
+
+  const pAbordagem = document.createElement("p");
+  pAbordagem.textContent =
+    "Tenho uma abordagem centrada no cliente, sempre empenhado em superar expectativas e entregar resultados excepcionais. Acredito que a excelência técnica aliada à compreensão profunda das necessidades do cliente é a chave para o sucesso de qualquer projeto.";
+
+  const h2Foco = document.createElement("h2");
+  h2Foco.textContent = "Foco em Resultados:";
+
+  const pFoco = document.createElement("p");
+  pFoco.textContent =
+    "Minha mentalidade é orientada para resultados. Busco constantemente maneiras de otimizar processos, melhorar a eficiência e criar soluções que não apenas atendam, mas excedam as metas e objetivos estabelecidos.";
+
+  const h2Principios = document.createElement("h2");
+  h2Principios.textContent = "Princípios Profissionais:";
+
+  const pInovacao = document.createElement("p");
+  pInovacao.innerHTML =
+    "<strong>Inovação:</strong> Sempre em busca de novas tecnologias e abordagens para melhorar a qualidade e a eficiência do desenvolvimento.";
+
+  const pColaboracao = document.createElement("p");
+  pColaboracao.innerHTML =
+    "<strong>Colaboração:</strong> Valorizo o trabalho em equipe e a troca de ideias para alcançar soluções mais sólidas.";
+
+  const pComprometimento = document.createElement("p");
+  pComprometimento.innerHTML =
+    "<strong>Comprometimento:</strong> Dedicado a entregar projetos no prazo, mantendo altos padrões de qualidade.";
+
+  // Adicionando os elementos à div .sobremim
+  divTecnologias.appendChild(imgHTML5);
+  divTecnologias.appendChild(imgCSS3);
+  divTecnologias.appendChild(imgJS);
+  divTecnologias.appendChild(imgReact);
+  divTecnologias.appendChild(imgPython);
+  divTecnologias.appendChild(imgSQL);
+
+  divSobreMim.appendChild(h2SobreMim);
+  divSobreMim.appendChild(pSobreMim);
+  divSobreMim.appendChild(document.createElement("br"));
+  divSobreMim.appendChild(h2Tecnologias);
+  divSobreMim.appendChild(divTecnologias);
+  divSobreMim.appendChild(document.createElement("br"));
+  divSobreMim.appendChild(h2Abordagem);
+  divSobreMim.appendChild(pAbordagem);
+  divSobreMim.appendChild(document.createElement("br"));
+  divSobreMim.appendChild(h2Foco);
+  divSobreMim.appendChild(pFoco);
+  divSobreMim.appendChild(document.createElement("br"));
+  divSobreMim.appendChild(h2Principios);
+  divSobreMim.appendChild(pInovacao);
+  divSobreMim.appendChild(document.createElement("br"));
+  divSobreMim.appendChild(pColaboracao);
+  divSobreMim.appendChild(document.createElement("br"));
+  divSobreMim.appendChild(pComprometimento);
+  divSobreMim.appendChild(document.createElement("br"));
+
+  // Adicionando div .sobremim à section
+  section.appendChild(divSobreMim);
+
+  // Adicionando a div .image-container com a imagem
+  const divImageContainer = document.createElement("div");
+  divImageContainer.classList.add("image-container");
+  const imgJhonatan = document.createElement("img");
+  imgJhonatan.id = "img-jhonatan";
+  imgJhonatan.src = "./images/jhonatan.jpg";
+  imgJhonatan.alt = "Imagem Jhonatan";
+  imgJhonatan.classList.add("colorida");
+  divImageContainer.appendChild(imgJhonatan);
+  section.appendChild(divImageContainer);
+
+  // Adicionando section como o primeiro filho da tag main
+  const main = document.querySelector("main");
+  main.insertBefore(section, main.firstChild);
+
+  // Função auxiliar para criar elementos <img>
+  function criarImagem(src) {
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = "";
+    return img;
+  }
+}
+
+// Chamando a função para criar os elementos quando a página é carregada
+window.onload = function () {
+  criarElementos();
+};
+
 // Inserir os dados do Portfolio:
 const listaPortfolio = document.querySelector(".listaPortfolio");
 
