@@ -66,7 +66,7 @@ nav.appendChild(menuDiv);
 // Adicionando o <nav> ao <header>
 header.appendChild(nav);
 
-// Criando as TAGS, antes exinidas por HTML, agora por meio do JavaScript
+// Criando as TAGS "Sobre Mim", antes exibidas por HTML, agora por meio do JavaScript
 // Função para criar e adicionar elementos HTML
 function criarElementos() {
   // Criando os elementos
@@ -256,6 +256,82 @@ dadosPortfolio.forEach((portfolio) => {
 
   listaPortfolio.appendChild(card);
 });
+
+// Adicionando as informações de contatos via JavaScript
+// Criação dos elementos HTML
+const containerDiv = document.createElement("div");
+containerDiv.classList.add("container");
+
+const headerH3 = document.createElement("h3");
+headerH3.classList.add("header");
+headerH3.textContent = "Contatos";
+
+const buttonsContainerDiv = document.createElement("div");
+buttonsContainerDiv.classList.add("buttons-container");
+
+const emailButton = document.createElement("button");
+emailButton.classList.add("email");
+emailButton.innerHTML = `
+  <img src="./images/envelope.png" alt="email" />
+  <a href="mailto:jhonatan.dev90@gmail.com">jhonatan.dev90@gmail.com</a>
+`;
+
+const telefoneButton = document.createElement("button");
+telefoneButton.classList.add("telefone");
+telefoneButton.innerHTML = `
+  <img src="./images/telefone.png" alt="telefone" />
+  <a href="tel:+5593991737093">+55 93 99173-7093</a>
+`;
+
+const mensagemContatoDiv = document.createElement("div");
+mensagemContatoDiv.classList.add("mensagem-contato");
+
+const mensagemHeaderH3 = document.createElement("h3");
+mensagemHeaderH3.textContent = "Entre em contato através do formulário abaixo:";
+
+const form = document.createElement("form");
+form.setAttribute("action", "");
+
+const emailInput = document.createElement("input");
+emailInput.setAttribute("type", "email");
+emailInput.setAttribute("name", "email");
+emailInput.setAttribute("id", "email");
+emailInput.setAttribute("placeholder", "Email");
+emailInput.setAttribute("required", "");
+
+const mensagemTextarea = document.createElement("textarea");
+mensagemTextarea.setAttribute("name", "mensagem");
+mensagemTextarea.setAttribute("id", "mensagem");
+mensagemTextarea.setAttribute("placeholder", "Mensagem");
+mensagemTextarea.setAttribute("required", "");
+
+const enviarButton = document.createElement("button");
+enviarButton.setAttribute("type", "submit");
+enviarButton.setAttribute("id", "buttonsubmit");
+enviarButton.textContent = "Enviar";
+
+// Montagem da estrutura
+containerDiv.appendChild(headerH3);
+
+emailButton.appendChild(document.createElement("br"));
+telefoneButton.appendChild(document.createElement("br"));
+
+buttonsContainerDiv.appendChild(emailButton);
+buttonsContainerDiv.appendChild(telefoneButton);
+
+mensagemContatoDiv.appendChild(mensagemHeaderH3);
+mensagemContatoDiv.appendChild(form);
+form.appendChild(emailInput);
+form.appendChild(document.createElement("br"));
+form.appendChild(mensagemTextarea);
+form.appendChild(document.createElement("br"));
+form.appendChild(enviarButton);
+
+containerDiv.appendChild(buttonsContainerDiv);
+containerDiv.appendChild(mensagemContatoDiv);
+
+// Adicionar à página
+document.body.appendChild(containerDiv);
 
 // // Adicionando o footer via JS
 
